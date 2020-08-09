@@ -1,0 +1,10 @@
+._recipe_image img{
+    width: 100%;
+    height: 200px;
+}
+
+._recipe-key {
+    margin-right: 8px;
+    font-family: Metropolis;
+    font-weight: 500;
+}

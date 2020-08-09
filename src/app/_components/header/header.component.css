@@ -1,0 +1,15 @@
+._search {
+    display: inline-flex
+}
+
+._search img {
+    zoom: 0.8;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+._search input {
+    border-radius: 10px;
+}

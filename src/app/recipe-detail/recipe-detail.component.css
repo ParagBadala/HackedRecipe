@@ -1,0 +1,131 @@
+.search-wrapper {
+    padding: 2rem;
+}
+
+.content-left {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+}
+
+.content-left .back {
+    margin-top: 1rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+._recipe_title {
+    font-family: 'Metropolis-ExtraBold';
+}
+
+.content-left .image {
+    height: 270px;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.5) 1px 5px 5px;
+}
+
+._recipe_category {
+    text-transform: uppercase;
+}
+
+.content-right {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-items: flex-end;
+}
+
+.content-right ._title_description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.content-right ._recipe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2rem;
+    font-family: "Metropolis-Bold";
+    color: #000000;
+}
+
+.content-right .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-right .form .area {
+    box-shadow: rgba(0,0,0,0.5) 1px 5px 5px;
+    border-radius: 5px;
+}
+
+.content-right .form button {
+    margin-top: 1rem;
+    box-shadow: rgba(0,0,0,0.5) 1px 5px 5px;
+    background-color: #000A0A;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.7rem;
+}
+
+.content-right .circles {
+    display: flex;
+    flex-direction: row;
+}
+
+.bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;       
+    padding:20px 20px;
+    max-width: 100px;
+    border-radius: 55%;
+}
+
+.bubble h1 {
+    color: #fff;
+} 
+
+._heading h2 {
+    font-family: "Metropolis-Bold"
+}
+
+._recipe_description {
+    font-family: "Metropolis-RegularItalic";
+}
+
+._comment {
+    font-family: 'Metropolis-Thin';
+    margin-bottom: 10px;
+}
+
+._font-bold {
+    font-family: "Metropolis-Bold";
+}
+
+._font-semiBold {
+    font-family: "Metropolis-MediumItalic";
+}
+
+@media screen and (max-width: 500px) {
+    .content-right {
+        align-items: flex-start;
+        /* justify-content: start; */
+    }
+    .content-right ._title_description {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

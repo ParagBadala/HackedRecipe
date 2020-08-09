@@ -1,0 +1,49 @@
+<nz-modal *ngIf="recipeDetail" [(nzVisible)]="isVisible" nzTitle="Recipe Detail" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="_recipe_image">
+      <img src="{{recipeDetail?.image}}" />
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_id">
+      <span class="_recipe-key">ProductId: 
+        <span class="_recipe-value">{{recipeDetail?.id}}</span>
+      </span>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_category">
+      <span class="_recipe-key">Category: 
+        <span class="_recipe-value">{{recipeDetail?.category}}</span>
+      </span>  
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_name">
+      <span class="_recipe-key">Recipe Name: 
+        <span class="_recipe-value">{{recipeDetail?.name}}</span>
+      </span> 
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_price">
+      <span class="_recipe-key">Price: 
+        <span class="_recipe-value">{{recipeDetail?.price}}</span>
+      </span>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_label">
+      <span class="_recipe-key">Label: 
+        <span class="_recipe-value">{{recipeDetail?.label}}</span>
+      </span>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col class="_recipe_description">
+      <span class="_recipe-key">Description: 
+        <span class="_recipe-value">{{recipeDetail?.description}}</span>
+      </span> 
+    </div>
+  </div>
+  </nz-modal>

@@ -1,0 +1,54 @@
+<!-- {{recipes | json}} -->
+
+<div nz-row nzJustify='center'>
+    <div nz-col [nzXs]='{span: 18}' [nzSm]='{span: 18}' [nzMd]='{span: 18}' [nzLg]='{span: 18}'>
+        <app-header></app-header>
+        <div *ngIf="error">
+            {{error}}
+        </div>
+        <div nz-row nzJustify='end'>
+            <div nz-col class="_home-category">
+                <span class="_font-medium">CATEGORY</span>
+            </div>
+        </div>
+        <div nz-row nzJustify='end'>
+            <div nz-col class="_home-title">
+                <h1 class="_font-extra-bold">Pizza & Noodles</h1>
+            </div>
+        </div>
+        <div nz-row nzJustify='start' [nzGutter]=[16,8]>
+            <div *ngFor="let recipe of recipes | filter:filterValue; let i=index" nz-col [nzXs]='{span: 24}' [nzSm]='{span: 24}' [nzMd]='{span: 8}' [nzLg]='{span: 6}'>
+                <nz-card nzHoverable [nzCover]="coverTemplate" class='card'>
+                    <div class="_recipe-Img-label" *ngIf="recipe?.label">
+                        <span class="_img-label">{{recipe?.label}}</span>
+                    </div>
+                    <div class="_recipe-Img-footer" [ngClass]="{'_recipe-Img-footer-even': i%2===0, '_recipe-Img-footer-odd': i%2!==0}">
+                        <div class="_recipe-footer-content">
+                            <h2 class="_recipe-Img-name _font-bold" [ngClass]="{'_recipe-Img-name-even': i%2===0, '_recipe-Img-name-odd': i%2!==0}">{{recipe?.name}}</h2>
+                            <img src="../../assets/icons/Icon feather-heart.png" />
+                            <p class="_recipe-Img-category _text-transform-u _font-light">{{recipe?.category}} &nbsp; &nbsp; &nbsp; &nbsp; 
+                                <span class="_font-medium">
+                                    ${{recipe?.price}}
+                                </span>
+                            </p>
+                            <p class="_recipe-Img-description">{{recipe?.description}}</p>
+                        </div>
+                    </div>
+                        <div class="overlay"></div>
+                    <div class="button1">
+                        <a (click)="showModal(recipe)"> QUICK VIEW </a>
+                    </div>
+                    <div class="button2">
+                        <a (click)="viewReceipeDetail(recipe?.id)"> VIEW DETAILS </a>
+                    </div>
+
+                </nz-card>
+                <ng-template #coverTemplate class='image'>
+                    <img style="border-radius: 20px 20px 0 0; height: 200px;"alt="example" src="{{recipe?.image}}" />
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-recipe-detail-modal #recipeDetailModal></app-recipe-detail-modal>

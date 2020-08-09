@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin-top: 3.5rem;
+    background: url('./assets/images/Illustration4.png') left top no-repeat, url('./assets/images/Illustration1.png') right top no-repeat;
+    background-size: 300px, 300px;
+    background-color: rgb(226, 223, 223);
+}
+
+._text-transform-u {
+    text-transform: uppercase;
+}
+
+._font-bold {
+    font-family: "Metropolis-Bold";
+}
+
+._font-semiBold {
+    font-family: "Metropolis-SemiBold";
+}
+
+._font-extra-bold {
+    font-family: "Metropolis-ExtraBold";
+}
+
+._font-light {
+    font-family: "Metropolis-Light";
+}
+
+._font-medium {
+    font-family: "Metropolis-Medium";
+}

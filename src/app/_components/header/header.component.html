@@ -1,0 +1,6 @@
+<div nz-row [nzGutter]="2">
+    <div nz-col nzSpan='24' class="_search">
+        <img src="../../assets/icons/Icon feather-search.png" />
+        <input nz-input placeholder="Search Your favourate recipe" (keyup)="filterRecipe($event)" [(ngModel)]="filterValue"/>
+    </div>
+</div>
